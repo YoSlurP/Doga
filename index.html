@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Választott-Téma</title>
+    <style>
+        body{
+            background-color: black;
+        }
+
+        
+        
+        .alap{
+            display: flex;
+            flex-direction: column;
+            margin-right: 10px;
+        }
+        .kep{
+            height: 40%;
+            width: 100%;
+        }
+        .hatter{
+            background-color: white;
+            border: solid 1px lightgrey;
+            padding: 0px 5px 5px 5px;
+            margin-bottom: 10px;
+        }
+        .racs{
+            display: grid;
+            grid-template-columns: repeat(2, 49%);
+            grid-template-rows: repeat(3, 32%);
+            gap: 10px;
+            height: 100%;
+            width: 100%;
+        }
+        .f{
+            width: 100%;
+            height: 100%;
+        }
+        #kepek{
+            display: none;
+        }
+        #container{
+            display: flex;
+            flex-direction: column;
+            width: 95%;
+            margin: 0px auto;
+        }
+        
+        h2{
+            margin: 5px;
+        }
+
+        @media (min-width: 700px){
+            #container{
+                flex-direction: row;
+            }
+
+            #legujabb{
+                margin-right: 10px;
+            }
+        }
+
+        @media (min-width: 1400px){
+            #kepek{
+                display: flex;
+                flex-direction: column;
+            }
+            .hatter{
+                width: 33%;
+            }
+        }
+    </style>
+
+    <script>
+        function dsa(){
+            document.querySelector("title").innerHTML = "Választott-Téma (" + document.querySelector("html").clientWidth + " px)";
+        }
+
+
+    </script>
+</head>
+<body onload="dsa();" onresize="dsa();">
+    <div id="container">
+        <div class="alap hatter" id="1">
+            <h2>Legújabb hírek</h2>
+            <img class="kep" src="supra1.jpg">
+            <p>Toyota Supra Gr (Mk5) 2019-óta gyárták az Mk4 utodja</p>
+            <img class="kep" src="supra2.jpg">
+            <p>Paul Walker Toyota Suprája a Halálos Irmaban című filmben jelenik meg. A film megjelénse után a csillagos egekbe ugrott az ára a kocsinak.</p>
+        </div>
+        <div class="alap hatter" id="2">
+            <h2>További hírek</h2>
+            <img class="kep" src="supra 3.jpg">
+            <p>Az Mk4 elődje azaz a MK3 látható. Amit 1986-tól gyártották japánban popupos headlightal.</p>
+            <img class="kep" src="dbbf0b5609511a81cb1444f9a90ae598.jpg">
+            <p>Az autónak az interiorja magyarul a belseja látható.</p>
+        </div>
+        <div class="hatter" id="3">
+            <h2>Képek</h2>
+            <div class="racs">
+                    <img class="f" src="1.jpg">
+                    <img class="f" src="2.jpg">
+                    <img class="f" src="3.jpg">
+                    <img class="f" src="4.jpg">
+                    <img class="f" src="5.jpg">
+                    <img class="f" src="6.jpg">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
